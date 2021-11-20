@@ -7,6 +7,7 @@ from miscc.config import cfg
 from GlobalAttention import func_attention
 
 
+
 # ##################Loss for matching text-image###################
 def cosine_similarity(x1, x2, dim=1, eps=1e-8):
     """Returns cosine similarity between x1 and x2, computed along dim.
@@ -182,7 +183,7 @@ def generator_loss(netsD, image_encoder, fake_imgs, real_labels,
             g_loss = cond_errG
         errG_total += g_loss
         # err_img = errG_total.data[0]
-        logs += 'g_loss%d: %.2f ' % (i, g_loss.item())
+        logs += 'g_loss%d: %.2f ' % (i, g_loss)
 
         # Ranking loss
         if i == (numDs - 1):

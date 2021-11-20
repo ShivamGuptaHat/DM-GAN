@@ -1,7 +1,7 @@
 CONFIG_NAME: 'DMGAN'
 
 DATASET_NAME: 'birds'
-DATA_DIR: '../data/birds'
+DATA_DIR: '/content/DM-GAN/data/birds'
 GPU_ID: 3
 WORKERS: 1
 
@@ -12,10 +12,10 @@ TREE:
 
 TRAIN:
     FLAG: False
-    NET_G: '../models/bird_DMGAN.pth'
+    NET_G: '/content/DM-GAN/models/bird_DMGAN.pth'
     B_NET_D: False
     BATCH_SIZE: 10
-    NET_E: '../DAMSMencoders/bird/text_encoder200.pth'
+    NET_E: '/content/DM-GAN/DAMSMencoders/bird/text_encoder200.pth'
 
 
 GAN:
